@@ -1,0 +1,25 @@
+
+#modalContactUs.reveal(data-reveal, data-animation-in="slide-in-down")
+    button.close-modal(data-close)
+    .title
+        h4 Contact Us
+        p We would love to talk to you about how we can work together
+    
+    form(data-abide novalidate).common-form
+        label.form-field
+            input(type="text", name="name", placeholder="Name", required)
+            span.form-error This is a required field
+        label.form-field
+            input(type="text", name="email", placeholder="Your@mail.com", required pattern="email")
+            span.form-error Enter a valid email
+        label.form-field
+            textarea(type="text", name="message", placeholder="Message")
+        fieldset.text-center
+            button.button.send(type="submit") Send
+            
+#modalSuccess.reveal(data-reveal, data-animation-in="slide-in-down")
+    button.close-modal(data-close)
+    .title
+        h4 Sending success!
+        p We will contact you soon
+                

@@ -15,12 +15,21 @@ UNCSS_OPTIONS:
     - !!js/regexp .foundation-mq
     - !!js/regexp ^\.is-.*
     - !!js/regexp ^\.slick-.*
+    - !!js/regexp ^\.reveal-.*
+    - !!js/regexp ^\.mui-.*
+    - !!js/regexp ^\.fade-.*
+    - !!js/regexp ^\.slide-.*
     - !!js/regexp .slick-dots
+    - !!js/regexp .slick-arrow
+    - !!js/regexp .is-active
+    - !!js/regexp .is-invalid-input
+    - !!js/regexp .reveal
+    - !!js/regexp .animated
 
 # Gulp will reference these paths when it copies files
 PATHS:
   # Path to dist folder
-  dist: "dist"  
+  dist: "dist"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
@@ -39,20 +48,20 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    #- "bower_components/foundation-sites/js/foundation.abide.js"            # валидатор полей формы
+    - "bower_components/foundation-sites/js/foundation.abide.js"             # валидатор полей формы
     #- "bower_components/foundation-sites/js/foundation.accordion.js"        # аккордион
     #- "bower_components/foundation-sites/js/foundation.accordionMenu.js"    # меню аккордион
     #- "bower_components/foundation-sites/js/foundation.drilldown.js"        # меню как в приложениях
-    #- "bower_components/foundation-sites/js/foundation.dropdown.js"         # выпадающяя панель 
+    #- "bower_components/foundation-sites/js/foundation.dropdown.js"         # выпадающяя панель
     #- "bower_components/foundation-sites/js/foundation.dropdownMenu.js"     # выпадающее меню
     #- "bower_components/foundation-sites/js/foundation.equalizer.js"        # одинаковая высота блоков
     #- "bower_components/foundation-sites/js/foundation.interchange.js"      # для разного разрешения разный контент
-    #- "bower_components/foundation-sites/js/foundation.magellan.js"         # скролл по якорю до элемента 
+    #- "bower_components/foundation-sites/js/foundation.magellan.js"         # скролл по якорю до элемента
     #- "bower_components/foundation-sites/js/foundation.offcanvas.js"        # выезжающее меню за пределами страницы
     #- "bower_components/foundation-sites/js/foundation.orbit.js"            # слайдер контента
     #- "bower_components/foundation-sites/js/foundation.responsiveMenu.js"   # в мобиле делает меню как в приложениях
     #- "bower_components/foundation-sites/js/foundation.responsiveToggle.js" # в мобиле открывает/закрывает меню
-    #- "bower_components/foundation-sites/js/foundation.reveal.js"           # модальные окна
+    - "bower_components/foundation-sites/js/foundation.reveal.js"            # модальные окна
     #- "bower_components/foundation-sites/js/foundation.slider.js"           # полоски слайдера
     #- "bower_components/foundation-sites/js/foundation.sticky.js"           # pushpin
     #- "bower_components/foundation-sites/js/foundation.tabs.js"             # вкладки

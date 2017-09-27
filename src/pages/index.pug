@@ -4,10 +4,19 @@
 
 extend ../layouts/_default
 block body
-
-	.large-12.columns
-		p.
-			Home page content
-
-
-
+	
+	include ../partials/_intro
+	include ../partials/_services
+	include ../partials/_pricing
+	include ../partials/_callback-block
+	.bg2
+		include ../partials/_experience
+		include ../partials/_how-start
+		include ../partials/_clients
+	include ../partials/_testimonials
+	include ../partials/_team
+	//- include ../partials/_partners
+	include ../partials/_press
+	include ../partials/_contact-us
+	include ../partials/_footer
+	include ../partials/_modals

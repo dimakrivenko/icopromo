@@ -1,0 +1,169 @@
+//-----------------------------------
+//   Experience
+//-----------------------------------
+
+.l-experience {
+    .content {
+        h4 {
+            font: 24px $source-sans;
+            margin-bottom: 20px;
+            @include mq('tablet') {
+                font-size: 22px;
+            }
+        }
+        p {
+            font: 20px/27px $source-serif;
+            margin-bottom: 15px;
+            opacity: .7;
+            @include mq('tablet') {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    }
+    .dropdown-list {
+        width: 384px;
+        float: right;
+        background-color: #fff;
+        border-radius: 20px;
+        @include mq('tablet-wide') {
+            float: none;
+            margin: 30px 0 0 52px;
+            width: calc(100% - 52px);
+        }
+        @include mq('tablet') {
+            width: calc(100% - 35px) !important;
+            margin-left: 35px !important;
+        }
+        .item {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to left, #ffffff, rgba(169, 146, 96, 0.7) 53%, rgba(255, 255, 255, 0.7));
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+            .circle {
+                position: absolute;
+                top: 5px;
+                // bottom: 0;
+                margin: auto;
+                left: -52px;
+                z-index: 2;
+                border-radius: 100px;
+                padding: 20px 0;
+                width: 104px;
+                height: 104px;
+                background-color: $orange;
+                box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+                text-align: center;
+                @include mq('tablet') {
+                    width: 70px;
+                    height: 70px;
+                    left: -35px;
+                    padding: 12px 0;
+                }
+                p {
+                    color: #fff;
+                    &.number {
+                        @include mq('tablet') {
+                            line-height: 20px;
+                        }
+                        span {
+                            font: 300 36px/36px $source-sans;
+                            @include mq('tablet') {
+                                font-size: 26px;
+                                line-height: 28px;
+                            }
+                            &.big {
+                                font-size: 48px;
+                                font-weight: 400;
+                                @include mq('tablet') {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                    &.text {
+                        font: 700 12px $source-sans;
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        @include mq('tablet') {
+                            font-size: 10px;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+
+            }
+            .title {
+                position: relative;
+                display: table;
+                width: 100%;
+                height: 112px;
+                user-select: none;
+                padding: 0 45px 0 70px;
+                cursor: pointer;
+                @include mq('tablet') {
+                    height: 80px;
+                    padding: 0 35px 0 50px;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 15px;
+                    margin: auto;
+                    width: 30px;
+                    height: 30px;
+                    transition: .3s ease;
+                    background: svg-load('../svg-icons/arr-down.svg') no-repeat center;
+                    @include mq('tablet') {
+                        width: 22px;
+                        height: 22px;
+                        right: 10px;
+                    }
+                }
+                p {
+                    display: table-cell;
+                    vertical-align: middle;
+                    font: 24px $source-sans;
+                    @include mq('tablet') {
+                        font-size: 20px;
+                    }
+                }
+            }
+            & > .desc {
+                display: none;
+                padding: 0 15px 15px 70px;
+                @include mq('tablet') {
+                    padding-left: 50px;
+                }
+                p {
+                    font: 18px/24px $source-serif;
+                    opacity: .7;
+                    @include mq('tablet') {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            &.is-active {
+                .title {
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

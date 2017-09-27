@@ -1,0 +1,77 @@
+//-----------------------------------
+//   Callback block
+//-----------------------------------
+
+.callback-block {
+    background: linear-gradient(to right, #fdf5ed, #ef7b45);
+    border-radius: 20px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+    font-size: 0;
+    @include mq('tablet') {
+        background: linear-gradient(140deg, #fdf5ed, #ef7b45);
+    }
+    .info {
+        display: inline-block;
+        vertical-align: middle;
+        width: 60%;
+        padding: 15px 0 15px 30px;
+        @include mq('tablet-wide') {
+            width: 70%;
+        }
+        @include mq('tablet') {
+            width: 100% !important;
+            padding: 50px 15px !important;
+        }
+        .ico {
+            display: inline-block;
+            vertical-align: middle;
+            width: 128px;
+            height: 128px;
+            opacity: .8;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            @include mq('tablet') {
+                width: 80px;
+                height: 80px;
+                float: right;
+            }
+            &.launch { background-image: svg-load('../svg-icons/icn-launch.svg'); }
+            &.launch-2 { background-image: svg-load('../svg-icons/icn-launch-2.svg'); }
+        }
+        .text {
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - 128px);
+            padding-left: 30px;
+            @include mq('tablet') {
+                width: calc(100% - 80px);
+                padding: 0 20px 0 0;
+            }
+            p {
+                font: 24px $source-sans;
+                letter-spacing: -0.5px;
+                @include mq('tablet') { font-size: 20px; }
+                &.gold {
+                    font-family: $source-serif;
+                    color: $gold;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .btn {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40%;
+        text-align: center;
+        padding: 15px 30px 15px 0;
+        @include mq('tablet-wide') {
+            width: 30%;
+        }
+        @include mq('tablet') {
+            width: 100% !important;
+            padding: 0 15px 50px 15px !important;
+        }
+    }
+}

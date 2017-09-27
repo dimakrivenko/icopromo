@@ -1,0 +1,125 @@
+//-----------------------------------
+//   Pricing
+//-----------------------------------
+
+.l-pricing {
+    margin-bottom: 100px;
+    @include mq('tablet') {
+        margin-bottom: 50px;
+    }
+    .list-item {
+        .item {
+            background-color: #fdf5ed;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            @include mq('tablet') {
+                width: 300px;
+                margin: 0 auto 30px auto;
+            }
+            .top {
+                display: table;
+                width: 101%;
+                padding: 0 10px;
+                h4 {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 104px;
+                    font: 24px $source-sans;
+                }
+            }
+            .middle {
+                padding: 25px 10px;
+                p {
+                    font: 24px $source-sans;
+                    &.title {
+                        color: #a99260;
+                        text-transform: uppercase;
+                        font: 700 14px $source-sans;
+                        letter-spacing: 6px;
+                        margin-bottom: 10px;
+                    }
+                    strong {
+                        font-size: 64px;
+                        line-height: 66px;
+                        font-weight: 400;
+                    }
+                    span {
+                        opacity: .7;
+                        font-weight: 300;
+                    }
+                    &.or {
+                        position: relative;
+                        margin-top: 35px;
+                        font-size: 18px;
+                        line-height: 14px;
+                        height: 16px;
+                        color: #a99260;
+                        opacity: .7;
+                        &:before, &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            height: 1px;
+                            width: 50%;
+                        }
+                        &:before {
+                            position: absolute;
+                            left: -15px;
+                            background: linear-gradient(to right, #ffffff, rgba(169, 146, 96, 0.7));
+                        }
+                        &:after {
+                            position: absolute;
+                            right: -15px;
+                            background: linear-gradient(to left, #ffffff, rgba(169, 146, 96, 0.7));
+                        }
+                    }
+                }
+            }
+            .bottom {
+                padding: 0 10px 25px 10px;
+                p {
+                    font: 24px $source-sans;
+                    &.title {
+                        color: #a99260;
+                        text-transform: uppercase;
+                        font: 700 14px $source-sans;
+                        letter-spacing: 6px;
+                        margin-bottom: 10px;
+                    }
+                    &.text {
+                        font-size: 24px;
+                        color: $orange;
+                        opacity: .7;
+                        font-weight: 300;
+                    }
+                    &.price {
+                        font-size: 24px;
+                        color: $orange;
+                        strong {
+                            font-size: 36px;
+                            line-height: 36px;
+                            font-weight: 400;
+                        }
+                        span {
+                            font-size: 18px;
+                            font-weight: 300;
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+            // Special block
+            &.special {
+                box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+                background-color: #fff;
+                .top {
+                    background: linear-gradient(132deg, #fdf5ed, #ef7b45);
+                }
+
+            }
+        }
+    }
+}

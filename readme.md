@@ -1,7 +1,4 @@
-# Default project
-
-
-Это стандартная сборка для быстрого разворачивания проекта на ZURB Foundation 6
+# ICO project
 
 Включает в себя следущее:
 
@@ -14,24 +11,17 @@
 
 ### Установка
 
-Склонируй репозиторий на комп:
-
-```bash
-git clone https://github.com/dimakrivenko/default-project.git
-```
-
 Перейди в папку и установи все плагины:
 
 ```bash
-cd default-project
+cd icopromo.com
 npm install
 bower install или sudo bower install --allow-root
 ```
 
 Запусти следующими командам:
-```bash 
+```bash
 gulp
 gulp build
 gulp build --production
-``` 
-
+```

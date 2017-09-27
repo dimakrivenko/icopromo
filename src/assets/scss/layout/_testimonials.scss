@@ -1,0 +1,190 @@
+//-----------------------------------
+//   Testimonials
+//-----------------------------------
+
+.l-testimonials {
+    padding: 80px 0 50px 0;
+    .testimonials-slider-body {
+        .testimonials-slider {
+            position: relative;
+            .item {
+                display: table;
+                border-radius: 10px;
+                margin: 12px;
+                outline: none;
+            	background-color: #ffffff;
+            	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+                font-size: 0;
+                overflow: hidden;
+                .left {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 25%;
+                    text-align: center;
+                    background-image: linear-gradient(160deg, #fdf5ed, #ef7b45);
+                    @include mq('tablet-wide') {
+                        width: 30%;
+                    }
+                    @include mq('tablet') {
+                        display: block;
+                        width: 100% !important;
+                        padding: 20px 15px 15px 15px;
+                    }
+                    img {
+                        margin: 0 auto 7px auto;
+                    }
+                    p {
+                        font: 20px $source-sans;
+                        opacity: .6;
+                        color: #fff;
+                        letter-spacing: -0.4px;
+                    }
+                }
+                .right {
+                    position: relative;
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 75%;
+                    padding: 60px 80px 32px 110px;
+                    @include mq('tablet-wide') {
+                        padding: 40px 60px 25px 80px;
+                        width: 70%;
+                    }
+                    @include mq('tablet') {
+                        width: 100% !important;
+                        display: block;
+                        padding: 30px !important;
+                    }
+                    p.full-text {
+                        font: 20px/27px $source-serif;
+                        color: $gold;
+                        letter-spacing: -0.3px;
+                        margin-bottom: 24px;
+                        @include mq('tablet') {
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
+                    }
+                    .user {
+                        .img {
+                            display: inline-block;
+                            vertical-align: middle;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 104px;
+                            height: 104px;
+                            margin-right: 32px;
+                            @include mq('tablet') {
+                                width: 80px;
+                                height: 80px;
+                                margin-right: 25px;
+                            }
+                        }
+                        .info {
+                            display: inline-block;
+                            vertical-align: middle;
+                            p {
+                                font: 18px/27px $source-sans;
+                                font-weight: 200;
+                                @include mq('tablet') {
+                                    font-size: 16px;
+                                }
+                                &.name {
+                                    font-size: 24px;
+                                    font-weight: 400;
+                                    letter-spacing: -0.5px;
+                                    @include mq('tablet') {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .quote {
+                        position: absolute;
+                        top: 32px;
+                        left: 32px;
+                        width: 48px;
+                        height: 43px;
+                        background: svg-load('../svg-icons/quote-ico.svg') no-repeat center;
+                        background-size: contain;
+                        @include mq('tablet-wide') {
+                            top: 20px;
+                            left: 20px;
+                            width: 38px;
+                            height: 33px;
+                        }
+                        @include mq('tablet') { display: none; }
+                    }
+                }
+            }
+            .slick-arrow {
+                position: absolute;
+                top: 150px;
+                // bottom: 0;
+                // margin: auto;
+                width: 42px;
+                height: 42px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                text-indent: -9999px;
+                @include mq('tablet') {
+                    display: none !important;
+                }
+                &.slick-prev {
+                    left: -60px;
+                    background-image: svg-load('../svg-icons/slider-prev.svg');
+                    @include mq('tablet-wide') {
+                        left: -50px;
+                    }
+                }
+                &.slick-next {
+                    right: -60px;
+                    background-image: svg-load('../svg-icons/slider-next.svg');
+                    @include mq('tablet-wide') {
+                        right: -50px;
+                    }
+                }
+            }
+            .slick-dots {
+                position: absolute;
+                left: 0;
+                bottom: -45px;
+                width: 100%;
+                text-align: center;
+                @include mq('tablet') { bottom: -35px; }
+                li {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    border: 2px solid transparent;
+                    border-radius: 24px;
+                    cursor: pointer;
+                    margin: 0 12px;
+                    padding: 2px;
+                    transition: .2s ease;
+                    button {
+                        text-indent: -9999px;
+                        background-color: $gold;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 20px;
+                        display: block;
+                        transition: .2s ease;
+                    }
+                    &:hover {
+                        border-color: $gold;
+                    }
+                    &.slick-active {
+                        border-color: $gold;
+                        button {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

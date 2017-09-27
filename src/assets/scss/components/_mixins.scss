@@ -5,8 +5,8 @@
 // Media query
 $breakpoints: (
     "phone": 480px,
-    "tablet": 768px,
-    "tablet-wide": 992px,
+    "tablet": 640px,
+    "tablet-wide": 1024px,
     "desktop": 1200px
 );
 @mixin mq($width, $type: max) {

@@ -1,0 +1,60 @@
+.baron__clipper-v, .baron__clipper-h {
+    position: relative;
+    overflow: hidden;
+}
+.baron__scroller-v, .baron__scroller-h {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    /* remove line to customize scrollbar in iOs */
+}
+.baron__scroller-v::-webkit-scrollbar, .baron__scroller-h::-webkit-scrollbar  {
+    width: 0;
+    height: 0;
+}
+.baron__track {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.baron._scrollbar-v .baron__track, .baron._scrollbar .baron__track-h {
+    display: block;
+}
+.baron__free {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.baron__bar-v {
+    position: absolute;
+    right: 5px;
+    z-index: 1;
+    width: 5px;
+    background: $text;
+    border-radius: 3px;
+}
+.baron__bar-h {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    z-index: 1;
+    height: 5px;
+    background: $text;
+    border-radius: 3px;
+}
+.baron._scrollbar-v .baron__bar-v, .baron._scrollbar-h .baron__bar-h, {
+    display: block;
+}
+.baron__control {
+    display: none;
+}

@@ -3,5 +3,12 @@
 //-----------------------------------
 
 .l-footer {
-
+    text-align: center;
+    background: linear-gradient(to right, #fdf5ed, #ef7b45);
+    padding: 18px 0;
+    p {
+        font: 18px $source-sans;
+        font-weight: 200;
+        letter-spacing: -0.3px;
+    }
 }

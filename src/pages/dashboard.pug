@@ -1,0 +1,366 @@
+extend ../layouts/_default
+block body
+    
+    header.header.dashboard
+        a.logo(href="/")
+        .humburger
+        nav.top-menu
+            ul
+                li
+                    a(href="/") Home
+                li
+                    a(href="#") Dashboard
+                li
+                    a(href="#") Account
+                li
+                    a(href="#") 2FA
+                li
+                    a(href="#") Log in
+        .clearfix
+
+    section.l-dashboard
+        .row
+            .columns.medium-6
+                .card.head-top.address-balance
+                    .head
+                        h4 Your withdrawal address<br> and balance
+                    .content
+                        p.address 0x107051c193b331a566992400e6611b9838a5fbb3
+                        .text
+                            p
+                                strong.gold Ballance
+                            p
+                                span.number 12 233.0982331
+                                span.currency Test
+                        .bottom
+                            p
+                                span.
+                                    You can change your Ethereum address. But it will takes some time.<br>
+                                    Your manager connects with you.
+                            p
+                                a(href="#") Change address →
+                                
+            .columns.medium-6
+                .card.head-top.crowdsale
+                    .head
+                        h4 Crowdsale
+                    .content
+                        .text
+                            p
+                                strong.gold Already Bought
+                            p
+                                span.number 12 233.0982331
+                                span.currency Test
+                                span.exactly =
+                                span.number 12 233.09
+                                span.currency USD
+                        .currency-list
+                            .item.btc
+                                i
+                                span 690.123
+                                span.cur Btc
+                            .item.eth
+                                i
+                                span 690.123
+                                span.cur Eth
+	
+        .row
+            .columns.medium-12
+                .warning
+                    .row
+                        .columns.medium-5.medium-offset-2.large-4.large-offset-2
+                            .item
+                                h4 Important
+                                p.
+                                    DO NOT send from exchanges like <strong>Coinbase</strong>, <strong>Poloniex</strong>, <strong>Kraken</strong>.
+                        .columns.medium-5.large-4.end
+                            .item
+                                h4 Remenber
+                                p.
+                                    The security of your tokens, transactions, wallets and passwords
+                                    are your responsibility. (These rates are not final. The final 
+                                    rate will depend on the time your transaction gets confirmed 
+                                    on the blockchain)
+        .row.pay-with
+            .block-title
+                h2 Pay with
+                
+            .columns.medium-6
+                .card.head-right
+                    .content
+                        .text
+                            p
+                                strong.gold To address
+                            p 0x107051c193b331a566992400e6611b9838a5fbb1
+                        .qr-block
+                            img(src="./assets/img/qrcode.jpg", alt="qr")
+                            .inner
+                                .text
+                                    p
+                                        strong.gold Balance
+                                    p
+                                        span.number 233.09
+                                        span.currency Eth
+                                    p.rate
+                                        span.number 1
+                                        span.currency Eth
+                                        span.exactly =
+                                        span.number 233.09
+                                        span.currency Test
+                            .clearfix
+                    .head
+                        .ico.ethereum
+                        strong Ethereum
+                        
+            .columns.medium-6
+                .card.head-right
+                    .content
+                        .text
+                            p
+                                strong.gold Enter your waves address
+                                
+                        form
+                            input(type="text", name="waves")
+                            .bottom
+                                .left
+                                    button.button Save
+                                .right
+                                    .text
+                                        p
+                                            strong.gold Balance
+                                        p
+                                            span.number 233.09
+                                            span.currency Waves
+                    .head
+                        .ico.waves
+                        strong Waves
+                        
+            .columns.medium-6
+                .card.head-right
+                    .content
+                        .text
+                            p
+                                strong.gold To address
+                            p 0x107051c193b331a566992400e6611b9838a5fbb1
+                        .qr-block
+                            img(src="./assets/img/qrcode.jpg", alt="qr")
+                            .inner
+                                .text
+                                    p
+                                        strong.gold Balance
+                                    p
+                                        span.number 233.09
+                                        span.currency Btc
+                                    p.rate
+                                        span.number 1
+                                        span.currency Btc
+                                        span.exactly =
+                                        span.number 233.09
+                                        span.currency Test
+                            .clearfix
+                    .head
+                        .ico.bitcoin
+                        strong Bitcoin
+                        
+            .columns.medium-6
+                .card.head-right
+                    .content
+                        .text
+                            p
+                                strong.gold Get address
+                                
+                        form
+                            input(type="text", name="waves")
+                            .bottom
+                                .left
+                                    button.button Get address
+                                .right
+                                    .text
+                                        p
+                                            strong.gold Balance
+                                        p
+                                            span.number 233.09
+                                            span.currency Ltc
+                                            
+                        .text.text-right
+                            p.rate
+                                span.number 1
+                                span.currency Ltc
+                                span.exactly =
+                                span.number 233.09
+                                span.currency Test
+                    .head
+                        .ico.litecoin
+                        strong Litecoin
+                        
+        .row.erc20
+            .block-title
+                h2 ERC20 tokens
+                
+            .columns.medium-6
+                .token-list
+                    .top
+                        h4 Available tokens for pay
+                        table
+                            thead
+                                tr
+                                    th #
+                                    th Token
+                                    th Currency Rate
+                    
+                    .baron__clipper-v
+                        .baron__scroller-v
+                            table
+                                tbody
+                                    tr
+                                        td 1
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 2
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 3
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 4
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 5
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 6
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 7
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 8
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 9
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 10
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 11
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 12
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                                    tr
+                                        td 13
+                                        td OmiseGO
+                                        td 1 LTC = 46.172234 TEST
+                        .baron__bar-v
+            
+            .columns.medium-6
+                .card.head-top
+                    .head
+                        h4 Pay with ERC20 token
+                        .ico-body
+                            .ico.omise
+                            strong OmiceGO
+                        
+                    .content
+                        .text
+                            p
+                                strong.gold To address
+                            p 0x107051c193b331a566992400e6611b9838a5fbb1
+                        .qr-block
+                            img(src="./assets/img/qrcode.jpg", alt="qr")
+                            .inner
+                                .text
+                                    p
+                                        strong.gold Balance
+                                    p
+                                        span.number 233.09
+                                        span.currency Ltc
+                                    p.rate
+                                        span.number 1
+                                        span.currency Ltc
+                                        span.exactly =
+                                        span.number 233.09
+                                        span.currency Test
+                            .clearfix
+                    
+            
+        .row.history
+            .block-title
+                h2 Payment history
+            .columns.medium-12
+                .baron__clipper-h
+                    .baron__scroller-h
+                        table
+                            thead
+                                tr
+                                    th #
+                                    th Type
+                                    th Amount
+                                    th Amount Tokens
+                                    th Exchange Rate
+                                    th Currency Rate
+                                    th TxID
+                                    th Note
+                                    th Confirmations
+                                    th Created at
+                            tbody
+                                tr
+                                    td 1
+                                    td LTC
+                                    td 734
+                                    td 34070.445
+                                    td 1 LTC = 46.172234 TEST
+                                    td 1 LTC = 46.172234 TEST
+                                    td <p class="hash">0x107051c193b331a566992400e6611b9838a5fbb1</p>
+                                    td Not set
+                                    td 33652
+                                    td 23.08.2017<br>13:37:56
+                                tr
+                                    td 2
+                                    td LTC
+                                    td 734
+                                    td 34070.445
+                                    td 1 LTC = 46.172234 TEST
+                                    td 1 LTC = 46.172234 TEST
+                                    td <p class="hash">0x107051c193b331a566992400e6611b9838a5fbb1</p>
+                                    td Not set
+                                    td 33652
+                                    td 23.08.2017<br>13:37:56
+                                tr
+                                    td 3
+                                    td LTC
+                                    td 734
+                                    td 34070.445
+                                    td 1 LTC = 46.172234 TEST
+                                    td 1 LTC = 46.172234 TEST
+                                    td <p class="hash">0x107051c193b331a566992400e6611b9838a5fbb1</p>
+                                    td Not set
+                                    td 33652
+                                    td 23.08.2017<br>13:37:56
+                                tr
+                                    td 4
+                                    td LTC
+                                    td 734
+                                    td 34070.445
+                                    td 1 LTC = 46.172234 TEST
+                                    td 1 LTC = 46.172234 TEST
+                                    td <p class="hash">0x107051c193b331a566992400e6611b9838a5fbb1</p>
+                                    td Not set
+                                    td 33652
+                                    td 23.08.2017<br>13:37:56
+                    .baron__bar-h
+    
+    include ../partials/_footer

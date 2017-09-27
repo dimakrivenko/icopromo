@@ -1,0 +1,13 @@
+extend ../layouts/_default
+block body
+    
+    section.l-auth-page
+        .content-body
+            .content
+                .logo
+                form
+                    input.username(type="text", name="username", placeholder="Username")
+                    input.password(type="password", name="password", placeholder="Password")
+                    button.button Get started
+    
+    include ../partials/_footer

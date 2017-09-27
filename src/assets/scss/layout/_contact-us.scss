@@ -1,0 +1,85 @@
+//-----------------------------------
+//   Contact us
+//-----------------------------------
+
+.l-contact-us {
+    position: relative;
+    background: svg-load('../svg-icons/bg3.svg') no-repeat center 130px;
+    padding-bottom: 80px;
+    @include mq('tablet') {
+        background-position-y: 450px;
+    }
+    .contact-info {
+        border-radius: 10px;
+    	background-color: #ffffff;
+    	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+        margin-top: 56px;
+        padding: 30px;
+        font-size: 0;
+        .block {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            @include mq('tablet') {
+                width: 100%;
+                margin-bottom: 30px;
+                &:last-child { margin-bottom: 0; }
+            }
+            h4 {
+                font: 24px $source-sans;
+                margin-bottom: 24px;
+                letter-spacing: -0.5px;
+            }
+            ul {
+                li {
+                    list-style: none;
+                    a {
+                        display: block;
+                        font: 18px $source-sans;
+                        font-weight: 200;
+                        color: $text;
+                        margin-bottom: 15px;
+                        &:last-child { margin-bottom: 0; }
+                        i {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 24px;
+                            background-color: $gold;
+                            border-radius: 40px;
+                            transition: .2s ease;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 22px;
+                            &.mail { background-image: svg-load('../svg-icons/mail.svg'); }
+                            &.telegram { background-image: svg-load('../svg-icons/telegram.svg', fill=#fff); }
+                            &.skype { background-image: svg-load('../svg-icons/skype.svg', fill=#fff); }
+                            &.facebook { background-image: svg-load('../svg-icons/facebook.svg', fill=#fff); }
+                            &.twitter { background-image: svg-load('../svg-icons/twitter.svg', fill=#fff); }
+                            &.medium {
+                                background-image: svg-load('../svg-icons/medium.svg', fill=#fff);
+                                background-size: 26px;
+                            }
+                            &.linkedin {
+                                background-image: svg-load('../svg-icons/linkedin.svg', fill=#fff);
+                                background-size: 18px;
+                            }
+                        }
+                        span {
+                            display: inline-block;
+                            vertical-align: middle;
+                            border-bottom: 1px solid transparent;
+                            transition: .2s ease;
+                            letter-spacing: -0.3px;
+                        }
+                        &:hover {
+                            i { background-color: lighten($gold, 7%); }
+                            span { border-bottom-color: $text; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

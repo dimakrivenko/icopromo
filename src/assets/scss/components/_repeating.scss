@@ -2,3 +2,155 @@
 //   Reapiting styles
 //-----------------------------------
 
+.block-title {
+    text-align: center;
+    padding: 80px 0 60px 0;
+    @include mq('tablet') {
+        padding: 60px 0 40px 0;
+    }
+    h2 {
+        font: 48px $source-sans;
+        font-weight: 200;
+        letter-spacing: -1px;
+        @include mq('tablet') {
+            font-size: 40px;
+        }
+    }
+}
+
+.button {
+    margin: 0;
+    border-radius: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    color: $text;
+    letter-spacing: 1.1;
+    font: 14px $source-sans;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    transform: scale(1);
+    transition: .2s ease;
+    &:hover, &:focus {
+        // transform: scale(1.007);
+        background-color: #fff;
+        color: $text;
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.55);
+    }
+    &:active {
+        transform: scale(1);
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+    }
+}
+
+.item-list-group {
+    text-align: center;
+    font-size: 0;
+    .item {
+        display: inline-block;
+        width: 25%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+        @include mq('tablet-wide') {
+            width: 33.333336%;
+        }
+        @include mq('tablet') {
+            width: 50% !important;
+        }
+        // img {
+        //     width: 100%;
+        //     margin-bottom: 15px;
+        // }
+        p {
+            font: 24px $source-sans;
+            letter-spacing: -0.5px;
+            @include mq('tablet') {
+                font-size: 20px;
+            }
+        }
+    }
+    &.clients, &.partners {
+        .item {
+            position: relative;
+            .img {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 65px;
+                margin-bottom: 15px;
+            }
+            &.secret {
+                opacity: .4;
+                .img {
+                    height: 80px;
+                }
+                p {
+                    color: $gold;
+                }
+            }
+        }
+    }
+    &.clients {
+        .item {
+            padding: 0 20px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                height: 150px;
+                width: 1px;
+                background: linear-gradient(to top, rgba(255, 255, 255, 0.0), rgba(169, 146, 96, 0.7) 49%, rgba(255, 255, 255, 0.0));
+            }
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.form-field {
+    input, textarea {
+        font: 16px $source-sans;
+        font-weight: 200;
+        border-color: transparent;
+        box-shadow: none;
+        border-radius: 10px;
+        height: 48px;
+        opacity: .5;
+        padding: 5px 12px;
+        margin-bottom: 10px;
+        @include placeholder {
+            color: $text;
+        }
+        &:focus {
+            border: none;
+        }
+        &.is-invalid-input {
+            background-color: #fff;
+            border-color: $alert-color;
+        }
+    }
+    textarea {
+        resize: none;
+        min-height: 140px;
+        padding: 10px 12px;
+    }
+    .form-error {
+        font: 14px $source-sans;
+        padding-left: 5px;
+    }
+}
+
+.bg2 {
+    background: svg-load('../svg-icons/bg2.svg') no-repeat center 110px;
+    background-size: 100%;
+    @include mq('tablet-wide') {
+        background-size: cover;
+        background-position: top center;
+    }
+}

@@ -1,0 +1,95 @@
+//-----------------------------------
+//   Intro
+//-----------------------------------
+
+.l-intro {
+	position: relative;
+	height: 100vh;
+	background: resolve('intro-bg.png') no-repeat bottom right, linear-gradient(140deg, #fdf5ed, #fdeae4 45%, #f77f52) no-repeat center;
+	background-size: 1000px, cover;
+	@media only screen and (min-width: 1800px) {
+		background-size: 1600px, cover;
+	}
+	@media only screen and (min-width: 1500px) {
+		background-size: 1300px, cover;
+	}
+	@media only screen and (min-width: 768px) and (min-height: 990px) {
+		background-size: 1200px, cover;
+	}
+	@include mq('tablet-wide') {
+		background-size: 450px, cover;
+	}
+	h1 {
+		font: 52px $source-sans;
+		margin: 80px 0 20px 0;
+		letter-spacing: -0.5px;
+		@media only screen and (min-width: 1500px) {
+			font-size: 60px;
+		}
+		@include mq('tablet-wide') {
+			font-size: 40px;
+		}
+		@include mq('tablet') {
+			font-size: 24px;
+		}
+	}
+	.exchange-rates {
+		margin-top: 15px;
+		p {
+			&.text {
+				font: 18px $source-sans;
+				font-weight: 200;
+				padding-left: 5px;
+				@media only screen and (min-width: 1500px) {
+					font-size: 28px;
+				}
+				@include mq('tablet-wide') {
+					font-size: 16px;
+				}
+				@include mq('tablet') {
+					font-size: 12px;
+				}
+			}
+			&.bitcoin {
+				font: 36px $source-sans;
+				font-weight: 300;
+				color: #a99260;
+				margin-bottom: 15px;
+				span {
+					font: 48px/38px $source-sans;
+				}
+				@media only screen and (min-width: 1500px) {
+					font-size: 62px;
+					line-height: 54px;
+				}
+				@include mq('tablet-wide') {
+					font-size: 36px;
+				}
+				@include mq('tablet') {
+					font-size: 24px;
+					line-height: 24px;
+					margin-bottom: 5px;
+				}
+			}
+			&.usd {
+				font: 28px $source-sans;
+				font-weight: 300;
+				color: #a99260;
+				span, em {
+					font: 40px/38px $source-sans;
+				}
+				@media only screen and (min-width: 1500px) {
+					font-size: 50px;
+					line-height: 54px;
+				}
+				@include mq('tablet-wide') {
+					font-size: 30px;
+				}
+				@include mq('tablet') {
+					font-size: 20px;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+}

@@ -46,7 +46,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(990);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #2199e8,
@@ -62,7 +62,15 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+$text: #041e42;
+$gold: #a99260;
+$orange: #ef7b45;
+
+$source-sans: 'Source Sans Pro', sans-serif;
+$source-serif: 'Source Serif Pro', serif;
+
+$body-font-family: $source-serif, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -451,7 +459,7 @@ $progress-radius: $global-radius;
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 600px;
+$reveal-width: 480px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;

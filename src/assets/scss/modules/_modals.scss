@@ -1,0 +1,47 @@
+
+.reveal {
+    padding: 30px 50px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    background: rgb(252,242,232); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(252,242,232,1) 0%, rgba(229,100,51,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(252,242,232,1) 0%,rgba(229,100,51,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(252,242,232,1) 0%,rgba(229,100,51,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf2e8', endColorstr='#e56433',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    @include mq('tablet') {
+        margin-bottom: 0;
+        padding: 30px 20px;
+    }
+    .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        background: svg-load('../svg-icons/close.svg', fill=$text);
+    }
+    .title {
+        text-align: center;
+        h4 {
+            font: 24px $source-sans;
+            margin-bottom: 5px;
+        }
+        p {
+            font: 24px $source-serif;
+            color: $gold;
+            @include mq('tablet') {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+    form {
+        margin-top: 25px;
+        button.send {
+            width: 140px;
+            margin-top: 15px;
+        }
+    }
+}

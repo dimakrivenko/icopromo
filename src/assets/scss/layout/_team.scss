@@ -1,0 +1,88 @@
+//-----------------------------------
+//   Team
+//-----------------------------------
+
+.l-team {
+    .team-list {
+        font-size: 0;
+        text-align: center;
+        .item {
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 10px;
+            margin: 0 1% 50px 1%;
+        	background-color: #fdf5ed;
+        	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+            width: 23%;
+            border-radius: 10px;
+            overflow: hidden;
+            min-width: 220px;
+            @include mq('tablet') {
+                margin-bottom: 30px;
+                min-width: 250px;
+            }
+            .photo {
+                height: 130px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .title {
+                padding: 10px 15px;
+                margin-bottom: 5px;
+                text-align: left;
+                h4 {
+                    font: 24px $source-sans;
+                    margin-bottom: 5px;
+                    letter-spacing: -0.5px;
+                }
+                p {
+                    font: 18px $source-sans;
+                    font-weight: 200;
+                    letter-spacing: -0.4px;
+                }
+            }
+            ul.social {
+                font-size: 0;
+                padding: 0 15px;
+                margin-bottom: 15px;
+                text-align: left;
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    &:last-child { margin-right: 0; }
+                    a {
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $gold;
+                        border-radius: 24px;
+                        &:hover { background-color: lighten($gold, 7%); }
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 14px;
+                        &.mail { background-image: svg-load('../svg-icons/mail.svg'); }
+                        &.twitter { background-image: svg-load('../svg-icons/twitter.svg', fill=#fff); }
+                        &.facebook { background-image: svg-load('../svg-icons/facebook.svg', fill=#fff); }
+                        &.slack { background-image: svg-load('../svg-icons/slack.svg', fill=#fff); }
+                        &.telegram { background-image: svg-load('../svg-icons/telegram.svg', fill=#fff); }
+                    }
+                }
+            }
+            .description {
+                padding: 0 15px 15px 15px;
+                height: 380px;
+                @include mq('tablet') {
+                    height: auto;
+                }
+                p {
+                    font: 16px/22px $source-serif;
+                    text-align: left;
+                    letter-spacing: -0.2px;
+                    color: $text;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}

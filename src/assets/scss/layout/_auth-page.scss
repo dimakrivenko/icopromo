@@ -1,0 +1,64 @@
+//-----------------------------------
+//   Auth page
+//-----------------------------------
+
+.l-auth-page {
+    display: table;
+    width: 100%;
+    height: calc(100vh - 59px);
+    background: resolve('intro-bg.png') no-repeat bottom right, linear-gradient(140deg, #fdf5ed, #fdeae4 45%, #f77f52) no-repeat center;
+    background-size: 1000px, cover;
+    @include mq('tablet-wide') {
+		background-size: 450px, cover;
+	}
+    .content-body {
+        display: table-cell;
+        vertical-align: middle;
+        .content {
+            width: 290px;
+            margin: auto;
+            @include mq('phone') {
+                width: 270px;
+            }
+            .logo {
+                width: 190px;
+                height: 54px;
+                margin: 0 auto 40px auto;
+                background: svg-load('../svg-icons/logo.svg') no-repeat center;
+                background-size: contain;
+            }
+            form {
+                text-align: center;
+                input {
+                    text-align: left;
+                    border: none;
+                    height: 40px;
+                    padding: 5px 15px 5px 55px;
+                    background-repeat: no-repeat;
+                    background-color: rgba(255,255,255,.8);
+                    border-radius: 40px;
+                    box-shadow: none;
+                    margin-bottom: 25px;
+                    font: 300 14px $source-sans;
+                    @include placeholder {
+                        color: $text;
+                        opacity: .7;
+                    }
+                    &.username {
+                        background-position: 24px center;
+                        background-image: svg-load('../svg-icons/account.svg');
+                        background-size: 16px;
+                    }
+                    &.password {
+                        background-position: 24px center;
+                        background-image: svg-load('../svg-icons/lock.svg');
+                        background-size: 16px;
+                    }
+                }
+                .button {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
