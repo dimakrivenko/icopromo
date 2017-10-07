@@ -5,6 +5,7 @@
 .l-services {
     position: relative;
     background: svg-load('../svg-icons/bg1.svg') no-repeat bottom center;
+    background-size: cover;
     @include mq('tablet') {
         background-position: top center;
     }

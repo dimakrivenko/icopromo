@@ -149,8 +149,13 @@
 .bg2 {
     background: svg-load('../svg-icons/bg2.svg') no-repeat center 110px;
     background-size: 100%;
+    @media only screen and (min-width: 1400px) {
+        // background-size: 90%;
+        background-position: top center;
+    }
     @include mq('tablet-wide') {
         background-size: cover;
         background-position: top center;
     }
+
 }

@@ -40,6 +40,7 @@
 				font: 18px $source-sans;
 				font-weight: 200;
 				padding-left: 5px;
+				margin-bottom: 10px;
 				@media only screen and (min-width: 1500px) {
 					font-size: 28px;
 				}
@@ -51,12 +52,12 @@
 				}
 			}
 			&.bitcoin {
-				font: 36px $source-sans;
+				font: 48px $source-sans;
 				font-weight: 300;
 				color: #a99260;
 				margin-bottom: 15px;
 				span {
-					font: 48px/38px $source-sans;
+					font: 64px/64px $source-sans;
 				}
 				@media only screen and (min-width: 1500px) {
 					font-size: 62px;
@@ -72,11 +73,11 @@
 				}
 			}
 			&.usd {
-				font: 28px $source-sans;
+				font: 36px $source-sans;
 				font-weight: 300;
 				color: #a99260;
 				span, em {
-					font: 40px/38px $source-sans;
+					font: 48px/48px $source-sans;
 				}
 				@media only screen and (min-width: 1500px) {
 					font-size: 50px;
